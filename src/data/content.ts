@@ -6,6 +6,7 @@ import type {
   DetailsData,
   ContactData,
 } from '../types';
+import { assetUrl } from '../utils/assets';
 
 export const navigationLinks: NavLinkItem[] = [
   { id: 'nosotros', label: 'Nosotros', href: '#nosotros' },
@@ -16,8 +17,8 @@ export const navigationLinks: NavLinkItem[] = [
 
 export const heroContent: HeroData = {
   tagline: 'Construimos lugares donde quieras quedarte.',
-  videoSrc: '/video/nido-arquitectura-construccion.mp4',
-  fallbackImageSrc: '/img/nido-hero-poster.webp',
+  videoSrc: assetUrl('video/nido-arquitectura-construccion.mp4'),
+  fallbackImageSrc: assetUrl('img/nido-hero-poster.webp'),
 };
 
 export const aboutContent: AboutData = {
@@ -28,7 +29,7 @@ export const aboutContent: AboutData = {
       tag: 'NOSOTROS',
       heading: 'Creemos que un buen lugar para vivir empieza mucho antes de construirlo.',
       text: 'En NIDO. desarrollamos proyectos inmobiliarios pensando más allá de los planos y los metros cuadrados.',
-      imageSrc: '/img/content/nido-nosotros-filosofia.webp',
+      imageSrc: assetUrl('img/content/nido-nosotros-filosofia.webp'),
       imageAlt: 'Fachada arquitectónica residencial NIDO con sombra de árboles y terrazas',
       imagePosition: 'right',
     },
@@ -36,7 +37,7 @@ export const aboutContent: AboutData = {
       tag: 'NUESTRA MIRADA',
       heading: '¿Viviríamos aquí?',
       text: 'Nos importa dónde construimos, cómo se relaciona cada edificio con su entorno y cómo se vivirán sus espacios todos los días. Por eso, pensamos cada proyecto desde su ubicación, su arquitectura, la luz natural, la distribución y los materiales que elegimos.',
-      imageSrc: '/img/content/nido-nosotros-nuestra-mirada.webp',
+      imageSrc: assetUrl('img/content/nido-nosotros-nuestra-mirada.webp'),
       imageAlt: 'Muestras de materiales nobles, piedra sinterizada, madera y acabados arquitectónicos NIDO',
       imagePosition: 'left',
     },
@@ -44,7 +45,7 @@ export const aboutContent: AboutData = {
       tag: 'LO QUE NOS MUEVE',
       heading: 'Un edificio no termina cuando lo entregamos.',
       text: 'Es ahí cuando comienza a convertirse en hogar.',
-      imageSrc: '/img/content/nido-nosotros-lo-que-nos-mueve.webp',
+      imageSrc: assetUrl('img/content/nido-nosotros-lo-que-nos-mueve.webp'),
       imageAlt: 'Ambiente residencial cálido y luminoso de NIDO integrado con terraza y naturaleza exterior',
       imagePosition: 'right',
     },
@@ -63,13 +64,13 @@ export const projectsContent: ProjectsData = {
     description: 'Un proyecto que nace de nuestra manera de entender la arquitectura, donde la ubicación, la luz natural y la relación con el entorno forman parte de cada decisión.',
     ctaText: 'CONOCE BOSCO',
     ctaLink: '#contacto',
-    imageSrc: '/img/content/nido-bosco-fachada-parque.webp',
+    imageSrc: assetUrl('img/content/nido-bosco-fachada-parque.webp'),
     gallery: [
-      { label: 'Fachada', src: '/img/content/nido-bosco-fachada-parque.webp' },
-      { label: 'Sala Comedor', src: '/img/cascanueces/nido-cascanueces-sala-comedor.webp' },
-      { label: 'Cocina', src: '/img/cascanueces/nido-cascanueces-cocina.webp' },
-      { label: 'Dormitorio', src: '/img/cascanueces/nido-cascanueces-dormitorio.webp' },
-      { label: 'Terraza', src: '/img/cascanueces/nido-cascanueces-terraza.webp' },
+      { label: 'Fachada', src: assetUrl('img/content/nido-bosco-fachada-parque.webp') },
+      { label: 'Sala Comedor', src: assetUrl('img/cascanueces/nido-cascanueces-sala-comedor.webp') },
+      { label: 'Cocina', src: assetUrl('img/cascanueces/nido-cascanueces-cocina.webp') },
+      { label: 'Dormitorio', src: assetUrl('img/cascanueces/nido-cascanueces-dormitorio.webp') },
+      { label: 'Terraza', src: assetUrl('img/cascanueces/nido-cascanueces-terraza.webp') },
     ],
   },
   trajectoryBadge: 'TRAYECTORIA',
@@ -81,16 +82,16 @@ export const projectsContent: ProjectsData = {
       name: 'MORATTA',
       category: 'EXPERIENCIA PREVIA',
       statusTag: 'EN ACABADOS',
-      imageSrc: '/img/moratta/nido-moratta-fachada.webp',
+      imageSrc: assetUrl('img/moratta/nido-moratta-fachada.webp'),
       description: 'Residencias multifamiliares con énfasis en privacidad espacial y ventilación cruzada continua.',
       gallery: [
-        { label: 'Fachada', src: '/img/moratta/nido-moratta-fachada.webp' },
-        { label: 'Ingreso', src: '/img/moratta/nido-moratta-ingreso.webp' },
-        { label: 'Lobby', src: '/img/moratta/nido-moratta-lobby.webp' },
-        { label: 'Sala Comedor', src: '/img/moratta/nido-moratta-sala-comedor.webp' },
-        { label: 'Cocina', src: '/img/moratta/nido-moratta-cocina.webp' },
-        { label: 'Dormitorio', src: '/img/moratta/nido-moratta-dormitorio-principal.webp' },
-        { label: 'Baño', src: '/img/moratta/nido-moratta-bano.webp' },
+        { label: 'Fachada', src: assetUrl('img/moratta/nido-moratta-fachada.webp') },
+        { label: 'Ingreso', src: assetUrl('img/moratta/nido-moratta-ingreso.webp') },
+        { label: 'Lobby', src: assetUrl('img/moratta/nido-moratta-lobby.webp') },
+        { label: 'Sala Comedor', src: assetUrl('img/moratta/nido-moratta-sala-comedor.webp') },
+        { label: 'Cocina', src: assetUrl('img/moratta/nido-moratta-cocina.webp') },
+        { label: 'Dormitorio', src: assetUrl('img/moratta/nido-moratta-dormitorio-principal.webp') },
+        { label: 'Baño', src: assetUrl('img/moratta/nido-moratta-bano.webp') },
       ],
     },
     {
@@ -98,14 +99,14 @@ export const projectsContent: ProjectsData = {
       name: 'CASCANUECES',
       category: 'EXPERIENCIA PREVIA',
       statusTag: 'EN CONSTRUCCIÓN',
-      imageSrc: '/img/cascanueces/nido-cascanueces-fachada-detalle.webp',
+      imageSrc: assetUrl('img/cascanueces/nido-cascanueces-fachada-detalle.webp'),
       description: 'Edificio residencial exclusivo diseñado en armonía con su entorno urbano.',
       gallery: [
-        { label: 'Fachada', src: '/img/cascanueces/nido-cascanueces-fachada-detalle.webp' },
-        { label: 'Sala Comedor', src: '/img/cascanueces/nido-cascanueces-sala-comedor.webp' },
-        { label: 'Cocina', src: '/img/cascanueces/nido-cascanueces-cocina.webp' },
-        { label: 'Dormitorio', src: '/img/cascanueces/nido-cascanueces-dormitorio.webp' },
-        { label: 'Ingreso', src: '/img/cascanueces/nido-cascanueces-ingreso.webp' },
+        { label: 'Fachada', src: assetUrl('img/cascanueces/nido-cascanueces-fachada-detalle.webp') },
+        { label: 'Sala Comedor', src: assetUrl('img/cascanueces/nido-cascanueces-sala-comedor.webp') },
+        { label: 'Cocina', src: assetUrl('img/cascanueces/nido-cascanueces-cocina.webp') },
+        { label: 'Dormitorio', src: assetUrl('img/cascanueces/nido-cascanueces-dormitorio.webp') },
+        { label: 'Ingreso', src: assetUrl('img/cascanueces/nido-cascanueces-ingreso.webp') },
       ],
     },
   ],
@@ -123,7 +124,7 @@ export const detailsContent: DetailsData = {
       title: 'Materiales que perduran.',
       description: 'Elegimos materiales pensando tanto en su estética como en su resistencia y durabilidad. Nos interesan sus texturas, sus acabados y cómo se integran a la arquitectura de cada proyecto.',
       actionText: 'Texturas y acabados',
-      imageSrc: '/img/content/nido-detalle-01-materiales.webp',
+      imageSrc: assetUrl('img/content/nido-detalle-01-materiales.webp'),
     },
     {
       index: '02',
@@ -131,7 +132,7 @@ export const detailsContent: DetailsData = {
       title: 'Diseño con intención.',
       description: 'Pensamos la arquitectura como un conjunto de decisiones que deben funcionar entre sí. Desde la distribución de los espacios hasta la fachada, buscamos que cada elemento tenga un propósito.',
       actionText: 'Proporción y luz',
-      imageSrc: '/img/content/nido-detalle-02-arquitectura.webp',
+      imageSrc: assetUrl('img/content/nido-detalle-02-arquitectura.webp'),
     },
     {
       index: '03',
@@ -139,7 +140,7 @@ export const detailsContent: DetailsData = {
       title: 'Elegimos con quién construir.',
       description: 'Trabajamos con productos y proveedores que nos ofrecen calidad, garantía y respaldo. Porque para nosotros, una buena elección también significa poder responder cuando nuestros clientes lo necesitan.',
       actionText: 'Garantía constructiva',
-      imageSrc: '/img/content/nido-detalle-03-calidad-respaldo.webp',
+      imageSrc: assetUrl('img/content/nido-detalle-03-calidad-respaldo.webp'),
     },
   ],
 };
@@ -150,7 +151,7 @@ export const contactContent: ContactData = {
   title: 'Conversemos.',
   subtitle: '¿Te interesa alguno de nuestros proyectos? Nos encantará ayudarte a encontrar un lugar donde quieras quedarte.',
   formTitle: 'Hablemos de tu próximo hogar.',
-  imageSrc: '/img/content/nido-contacto-arquitectura-hogar.webp',
+  imageSrc: assetUrl('img/content/nido-contacto-arquitectura-hogar.webp'),
   channels: [
     {
       id: 'ws',

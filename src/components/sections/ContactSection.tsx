@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import type { ContactData, ContactFormState } from '../../types';
 import { MessageSquare, Mail, MapPin, ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react';
 import { ScrollText, ScrollBox } from '../../hooks/useScrollAnimations';
+import { assetUrl } from '../../utils/assets';
 
 const InstagramIcon: React.FC<{ size?: number; className?: string }> = ({ size = 18, className = '' }) => (
   <svg
@@ -105,7 +106,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
           <ScrollBox delay={100} className="lg:col-span-5 h-full min-h-[420px] lg:min-h-[580px]">
             <figure className="m-0 h-full w-full overflow-hidden rounded-xs bg-[#ede8e0] shadow-sm border border-[#e5dfd5] relative group">
               <img
-                src={data.imageSrc || '/img/content/nido-contacto-arquitectura-hogar.webp'}
+                src={data.imageSrc || assetUrl('img/content/nido-contacto-arquitectura-hogar.webp')}
                 alt="Ambiente y arquitectura NIDO"
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-103 group-hover:brightness-105 transition-all duration-700 ease-out"

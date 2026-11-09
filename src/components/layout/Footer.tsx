@@ -1,4 +1,5 @@
 import React from 'react';
+import { assetUrl } from '../../utils/assets';
 
 export const Footer: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ export const Footer: React.FC = () => {
           {/* Logotipo Oficial NIDO en blanco */}
           <a href="#inicio" className="inline-block hover:opacity-85 transition-opacity">
             <img
-              src="/img/nido-logotipo-oficial-blanco.png"
+              src={assetUrl('img/nido-logotipo-oficial-blanco.png')}
               alt="NIDO Desarrollos Inmobiliarios"
               className="h-8 sm:h-9 w-auto object-contain brightness-105"
             />

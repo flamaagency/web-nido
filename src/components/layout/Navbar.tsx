@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { NavLinkItem } from '../../types';
 import { Menu, X } from 'lucide-react';
+import { assetUrl } from '../../utils/assets';
 
 interface NavbarProps {
   links: NavLinkItem[];
@@ -37,7 +38,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
           aria-label="NIDO Inicio"
         >
           <img
-            src={isScrolled ? '/img/nido-logotipo-oficial.png' : '/img/nido-logotipo-oficial-blanco.png'}
+            src={isScrolled ? assetUrl('img/nido-logotipo-oficial.png') : assetUrl('img/nido-logotipo-oficial-blanco.png')}
             alt="NIDO Desarrollos Inmobiliarios"
             className="h-6 sm:h-7.5 w-auto object-contain transition-all duration-300"
           />

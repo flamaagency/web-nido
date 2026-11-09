@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import type { ProjectsData, ProjectGalleryItem } from '../../types';
 import { ArrowRight, ArrowUpRight, X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { ScrollReveal, ScrollText, ScrollBox } from '../../hooks/useScrollAnimations';
+import { assetUrl } from '../../utils/assets';
 
 interface ProjectsSectionProps {
   data: ProjectsData;
@@ -21,8 +22,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
 
   // Estados para vistas activas directas
   const [boscoImage, setBoscoImage] = useState<string>(mainProject.imageSrc);
-  const [morattaImage, setMorattaImage] = useState<string>(morattaProject?.imageSrc || '/img/moratta/nido-moratta-fachada.webp');
-  const [cascanuecesImage, setCascanuecesImage] = useState<string>(cascanuecesProject?.imageSrc || '/img/cascanueces/nido-cascanueces-fachada-detalle.webp');
+  const [morattaImage, setMorattaImage] = useState<string>(morattaProject?.imageSrc || assetUrl('img/moratta/nido-moratta-fachada.webp'));
+  const [cascanuecesImage, setCascanuecesImage] = useState<string>(cascanuecesProject?.imageSrc || assetUrl('img/cascanueces/nido-cascanueces-fachada-detalle.webp'));
 
   // Estado para la Galería Modal Lightbox interactiva
   const [activeGallery, setActiveGallery] = useState<ActiveGalleryState | null>(null);

@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Libre Baskerville", Georgia, serif;
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-baskerville: "Libre Baskerville", Georgia, serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  
+  --font-space: "Space Grotesk", sans-serif;
+  --font-work: "Work Sans", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+
+  /* Paleta Oficial NIDO. (PDF Identidad) */
+  --color-limo: #a2a397;
+  --color-piedra: #555349;
+  --color-piedra-dark: #2a2925;
+  --color-arcilla: #9b5238;
+  --color-arcilla-hover: #803f29;
+  --color-arena: #dbb294;
+  --color-arena-soft: #f6eee6;
+  --color-tierra-canvas: #faf8f5;
+  --color-tierra-warm: #f3eee7;
+
+  /* Aliases contextuales */
+  --color-bone-canvas: #F8F7F4;
+  --color-charcoal-ink: #555349;
+  --color-travertine-subtle: #f1ece4;
+  --color-hairline-stone: #a2a397;
+  --color-ochre-accent: #9b5238;
+  --color-slate-caption: #73706B;
+  --color-pure-black: #2a2925;
+  
+  --color-surface: #faf8f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f2ec;
+  --color-surface-container: #ede8df;
+  --color-surface-container-high: #e3ded5;
+  --color-surface-container-highest: #d6d0c5;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 2rem;
+  --spacing-space-xl: 4rem;
+  --spacing-space-2xl: 8rem;
+  --spacing-margin: 1.25rem;
+  --spacing-margin-desktop: 3.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-desktop: 2.5rem;
+}
+
+/* Regla Inquebrantable de Tipografía:
+   PRINCIPAL: Libre Baskerville
+   SECUNDARIA: Montserrat */
+.font-headline-xl {
+  font-family: var(--font-baskerville);
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+.font-headline-lg {
+  font-family: var(--font-baskerville);
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-family: var(--font-baskerville);
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+.font-body-lg {
+  font-family: var(--font-montserrat);
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-family: var(--font-montserrat);
+  letter-spacing: 0em;
+  font-weight: 400;
+}
+
+.font-body-sm {
+  font-family: var(--font-montserrat);
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+.font-label-code {
+  font-family: var(--font-montserrat);
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.font-label-vertical {
+  font-family: var(--font-montserrat);
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+
+.font-marquee-cta {
+  font-family: var(--font-baskerville);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.font-marquee-cta-mobile {
+  font-family: var(--font-baskerville);
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+/* Espaciadores de flujo vertical */
+.space-y-space-xs > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.25rem;
+}
+
+.space-y-space-sm > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.5rem;
+}
+
+.space-y-space-md > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 1rem;
+}
+
+.space-y-space-lg > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 2rem;
+}
+
+.space-y-space-xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 4rem;
+}
+
+.space-y-space-2xl > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 8rem;
+}
+
+/* Material Symbols icon support */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Estilos de Marca y Tipografía Flama Agency (Hub de Bienvenida) */
+.font-flama,
+.font-flama * {
+  font-family: var(--font-space), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.font-flama-heading {
+  font-family: var(--font-space), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-montserrat);
+    background-color: #faf9f6;
+    color: #1a1c1a;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Excluir el Hub de Flama de la regla de Baskerville para headings */
+  body:not(:has(.font-flama)) h1,
+  body:not(:has(.font-flama)) h2,
+  body:not(:has(.font-flama)) h3,
+  body:not(:has(.font-flama)) h4,
+  h1:not(.font-flama-heading),
+  h2:not(.font-flama-heading),
+  h3:not(.font-flama-heading),
+  h4:not(.font-flama-heading),
+  .font-serif {
+    font-family: var(--font-baskerville);
+  }
+}

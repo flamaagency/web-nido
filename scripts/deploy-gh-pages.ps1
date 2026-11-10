@@ -11,7 +11,7 @@ git add -A
 $status = git status --porcelain
 if ($status) {
     git commit -m "deploy: update gh-pages with latest design adjustments and renders"
-    git push origin gh-pages
+    git push origin gh-pages --force
     Write-Host "gh-pages deployed successfully!"
 } else {
     Write-Host "No changes to deploy to gh-pages."

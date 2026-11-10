@@ -50,6 +50,11 @@
   --spacing-gutter-desktop: 2.5rem;
 }
 
+.font-cursive-tagline {
+  font-family: "Cormorant Garamond", "Playfair Display", "Libre Baskerville", Georgia, serif !important;
+  font-style: italic !important;
+}
+
 /* Regla Inquebrantable de Tipografía:
    PRINCIPAL: Libre Baskerville
    SECUNDARIA: Montserrat */

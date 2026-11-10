@@ -17,14 +17,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
   return (
     <section
       id="inicio"
-      className="relative w-full min-h-screen flex flex-col justify-between items-center overflow-hidden bg-neutral-950 pt-28 pb-12"
+      className="relative w-full min-h-screen flex flex-col justify-between items-center overflow-hidden bg-neutral-900 pt-28 pb-12"
       aria-label="Presentación principal NIDO"
     >
-      {/* Background Video con tratamiento blanco y negro luminoso de alto contraste */}
+      {/* Background Video con tratamiento blanco y negro luminoso (más tirando hacia el blanco que al negro) */}
       <div className="absolute inset-0 z-0">
         {!isEmbedded && data.videoSrc ? (
           <video
-            className="w-full h-full object-cover scale-102 opacity-75 filter grayscale contrast-125 brightness-90"
+            className="w-full h-full object-cover scale-102 opacity-95 filter grayscale brightness-135 contrast-105"
             autoPlay
             loop
             muted
@@ -36,35 +36,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
             <img
               src={data.fallbackImageSrc}
               alt="Estructura de obra NIDO"
-              className="w-full h-full object-cover opacity-75 filter grayscale contrast-125 brightness-90"
+              className="w-full h-full object-cover opacity-95 filter grayscale brightness-135 contrast-105"
             />
           </video>
         ) : (
           <img
             src={data.fallbackImageSrc}
             alt="Estructura de obra NIDO"
-            className="w-full h-full object-cover opacity-75 filter grayscale contrast-125 brightness-90"
+            className="w-full h-full object-cover opacity-95 filter grayscale brightness-135 contrast-105"
             loading={isEmbedded ? 'eager' : 'lazy'}
           />
         )}
-        {/* Degradado suave para contraste legible sin oscurecer la escena */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/60" />
+        {/* Degradado tenue que resalta la claridad luminosa del blanco sin oscurecer la escena */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/35" />
       </div>
 
       {/* Espaciador superior */}
       <div className="w-full" />
 
-      {/* Titular Principal en Dos Líneas (Construimos grande + lugares donde quieras quedarte en tipografía recta no cursiva) */}
+      {/* Titular Principal en Dos Líneas con subtítulo en caligrafía cursiva destacada */}
       <ScrollReveal
         animation="fade-up"
         duration={1000}
         className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white my-auto flex flex-col items-center select-none"
       >
         <h1 className="tracking-tight text-center">
-          <span className="block font-serif text-5xl sm:text-7xl md:text-8xl lg:text-[104px] font-normal leading-[1.02] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
+          <span className="block font-serif text-5xl sm:text-7xl md:text-8xl lg:text-[104px] font-normal leading-[1.02] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
             Construimos
           </span>
-          <span className="block font-serif not-italic text-2xl sm:text-4xl md:text-5xl lg:text-[54px] text-[#EEE6DB] font-normal leading-[1.15] mt-3 sm:mt-5 tracking-normal drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)]">
+          <span className="block font-cursive-tagline text-3xl sm:text-5xl md:text-6xl lg:text-[68px] text-white/95 font-normal leading-[1.18] mt-3 sm:mt-5 tracking-wide drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
             lugares donde quieras quedarte.
           </span>
         </h1>

@@ -20,11 +20,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
       className="relative w-full min-h-screen flex flex-col justify-between items-center overflow-hidden bg-neutral-950 pt-28 pb-12"
       aria-label="Presentación principal NIDO"
     >
-      {/* Background Video con integración cinematográfica continua y mimetización cálida */}
+      {/* Background Video con tratamiento blanco y negro luminoso de alto contraste */}
       <div className="absolute inset-0 z-0">
         {!isEmbedded && data.videoSrc ? (
           <video
-            className="w-full h-full object-cover scale-105 opacity-35 filter brightness-75 contrast-95"
+            className="w-full h-full object-cover scale-102 opacity-75 filter grayscale contrast-125 brightness-90"
             autoPlay
             loop
             muted
@@ -36,26 +36,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
             <img
               src={data.fallbackImageSrc}
               alt="Estructura de obra NIDO"
-              className="w-full h-full object-cover opacity-35 filter brightness-75"
+              className="w-full h-full object-cover opacity-75 filter grayscale contrast-125 brightness-90"
             />
           </video>
         ) : (
           <img
             src={data.fallbackImageSrc}
             alt="Estructura de obra NIDO"
-            className="w-full h-full object-cover opacity-35 filter brightness-75"
+            className="w-full h-full object-cover opacity-75 filter grayscale contrast-125 brightness-90"
             loading={isEmbedded ? 'eager' : 'lazy'}
           />
         )}
-        {/* Degradado fluido que mimetiza el video con la identidad NIDO */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/50 to-neutral-950/90" />
-        <div className="absolute inset-0 bg-[#555349]/20 mix-blend-color" />
+        {/* Degradado suave para contraste legible sin oscurecer la escena */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/60" />
       </div>
 
       {/* Espaciador superior */}
       <div className="w-full" />
 
-      {/* Titular Principal en Dos Líneas (Construimos grande con tipografía especial + lugares donde quieras quedarte) */}
+      {/* Titular Principal en Dos Líneas (Construimos grande + lugares donde quieras quedarte en tipografía recta no cursiva) */}
       <ScrollReveal
         animation="fade-up"
         duration={1000}
@@ -65,7 +64,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
           <span className="block font-serif text-5xl sm:text-7xl md:text-8xl lg:text-[104px] font-normal leading-[1.02] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
             Construimos
           </span>
-          <span className="block font-serif italic text-2xl sm:text-4xl md:text-5xl lg:text-[56px] text-[#a2a397] font-light leading-[1.15] mt-2 sm:mt-4 drop-shadow-[0_2px_14px_rgba(0,0,0,0.8)]">
+          <span className="block font-serif not-italic text-2xl sm:text-4xl md:text-5xl lg:text-[54px] text-[#EEE6DB] font-normal leading-[1.15] mt-3 sm:mt-5 tracking-normal drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)]">
             lugares donde quieras quedarte.
           </span>
         </h1>

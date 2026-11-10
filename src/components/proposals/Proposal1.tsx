@@ -19,7 +19,7 @@ import {
 
 export const Proposal1: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf8f5] text-neutral-900 selection:bg-neutral-800 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#EEE6DB] text-neutral-900 selection:bg-neutral-800 selection:text-white">
       <ScrollProgressBar color="#9b5238" />
       <Navbar links={navigationLinks} />
       <main className="flex-1">

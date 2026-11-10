@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#faf8f5]/95 backdrop-blur-md border-b border-[#a2a397]/30 py-3.5 shadow-sm'
+          ? 'bg-[#EEE6DB]/95 backdrop-blur-md border-b border-[#ded5c8] py-3.5 shadow-xs'
           : 'bg-transparent py-5 sm:py-6'
       }`}
     >
@@ -84,7 +84,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <nav
-          className="md:hidden bg-[#faf8f5] text-neutral-900 px-6 py-8 border-b border-neutral-200 shadow-xl flex flex-col gap-4 animate-in fade-in duration-200"
+          className="md:hidden bg-[#EEE6DB] text-neutral-900 px-6 py-8 border-b border-[#ded5c8] shadow-xl flex flex-col gap-4 animate-in fade-in duration-200"
           aria-label="Menú móvil"
         >
           {links.map((link) => (

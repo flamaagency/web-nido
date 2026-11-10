@@ -64,9 +64,9 @@ export const projectsContent: ProjectsData = {
     description: 'Un proyecto que nace de nuestra manera de entender la arquitectura, donde la ubicación, la luz natural y la relación con el entorno forman parte de cada decisión.',
     ctaText: 'CONOCE BOSCO',
     ctaLink: '#contacto',
-    imageSrc: assetUrl('img/content/nido-bosco-fachada-parque.webp'),
+    imageSrc: assetUrl('img/content/nido-bosco-fachada-real.webp'),
     gallery: [
-      { label: 'Fachada', src: assetUrl('img/content/nido-bosco-fachada-parque.webp') },
+      { label: 'Fachada', src: assetUrl('img/content/nido-bosco-fachada-real.webp') },
       { label: 'Sala Comedor', src: assetUrl('img/cascanueces/nido-cascanueces-sala-comedor.webp') },
       { label: 'Cocina', src: assetUrl('img/cascanueces/nido-cascanueces-cocina.webp') },
       { label: 'Dormitorio', src: assetUrl('img/cascanueces/nido-cascanueces-dormitorio.webp') },
@@ -81,7 +81,7 @@ export const projectsContent: ProjectsData = {
       id: 'moratta',
       name: 'MORATTA',
       category: 'EXPERIENCIA PREVIA',
-      statusTag: 'EN ACABADOS',
+      statusTag: 'EN CONSTRUCCIÓN',
       imageSrc: assetUrl('img/moratta/nido-moratta-fachada.webp'),
       description: 'Residencias multifamiliares con énfasis en privacidad espacial y ventilación cruzada continua.',
       gallery: [
@@ -98,7 +98,7 @@ export const projectsContent: ProjectsData = {
       id: 'cascanueces',
       name: 'CASCANUECES',
       category: 'EXPERIENCIA PREVIA',
-      statusTag: 'EN CONSTRUCCIÓN',
+      statusTag: 'EN ACABADOS',
       imageSrc: assetUrl('img/cascanueces/nido-cascanueces-fachada-detalle.webp'),
       description: 'Edificio residencial exclusivo diseñado en armonía con su entorno urbano.',
       gallery: [
@@ -151,7 +151,7 @@ export const contactContent: ContactData = {
   title: 'Conversemos.',
   subtitle: '¿Te interesa alguno de nuestros proyectos? Nos encantará ayudarte a encontrar un lugar donde quieras quedarte.',
   formTitle: 'Hablemos de tu próximo hogar.',
-  imageSrc: assetUrl('img/content/nido-contacto-arquitectura-hogar.webp'),
+  imageSrc: assetUrl('img/content/nido-contacto-arquitectura-real.webp'),
   channels: [
     {
       id: 'ws',

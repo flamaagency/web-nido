@@ -75,26 +75,26 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
   return (
     <section
       id="contacto"
-      className="py-24 sm:py-32 bg-[#faf8f5] text-neutral-900 border-b border-[#e7e1d7]"
+      className="py-24 sm:py-32 bg-[#EEE6DB] text-neutral-900 border-b border-[#ded5c8]"
       aria-label="Contacto e información de proyectos"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10">
         {/* Encabezado Fiel a la Captura y PDF */}
         <header className="mb-12 sm:mb-16">
           <ScrollText delay={50}>
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#73706B] font-semibold block mb-3">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#858E71] font-semibold block mb-3">
               {data.sectionTag || 'CONTACTO'}
             </span>
           </ScrollText>
 
           <ScrollText delay={150}>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif text-neutral-900 tracking-tight leading-none mb-4">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif text-[#858E71] tracking-tight leading-none mb-4">
               {data.title || 'Conversemos.'}
             </h2>
           </ScrollText>
 
           <ScrollText delay={250}>
-            <p className="text-base sm:text-lg md:text-xl font-serif text-neutral-600 font-light max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl font-serif text-[#858E71]/85 font-normal max-w-2xl leading-relaxed">
               {data.subtitle || '¿Te interesa alguno de nuestros proyectos? Nos encantará ayudarte a encontrar un lugar donde quieras quedarte.'}
             </p>
           </ScrollText>
@@ -104,9 +104,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch mb-16 sm:mb-20">
           {/* Columna Izquierda: Fotografía de Arquitectura */}
           <ScrollBox delay={100} className="lg:col-span-5 h-full min-h-[420px] lg:min-h-[580px]">
-            <figure className="m-0 h-full w-full overflow-hidden rounded-xs bg-[#ede8e0] shadow-sm border border-[#e5dfd5] relative group">
+            <figure className="m-0 h-full w-full overflow-hidden rounded-xs bg-[#e3dbcd] shadow-sm border border-[#ded5c8] relative group">
               <img
-                src={data.imageSrc || assetUrl('img/content/nido-contacto-arquitectura-hogar.webp')}
+                src={data.imageSrc || assetUrl('img/content/nido-contacto-arquitectura-real.webp')}
                 alt="Ambiente y arquitectura NIDO"
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-103 group-hover:brightness-105 transition-all duration-700 ease-out"
@@ -118,28 +118,28 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
           {/* Columna Derecha: Tarjeta de Formulario "Hablemos de tu próximo hogar." */}
           <ScrollBox
             delay={220}
-            className="lg:col-span-7 bg-[#f5f1eb] p-8 sm:p-12 rounded-xs border border-[#e5dfd5] shadow-xs flex flex-col justify-center"
+            className="lg:col-span-7 bg-[#FAF7F2] p-8 sm:p-12 rounded-xs border border-[#ded5c8] shadow-xs flex flex-col justify-center"
           >
-            <h3 className="text-2xl sm:text-3xl font-serif text-neutral-900 mb-8 tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-serif text-[#858E71] mb-8 tracking-tight">
               {data.formTitle || 'Hablemos de tu próximo hogar.'}
             </h3>
 
             {isSubmitted ? (
               <div
-                className="p-10 bg-white border border-[#e5dfd5] text-center flex flex-col items-center justify-center space-y-4 rounded-xs shadow-xs"
+                className="p-10 bg-white border border-[#ded5c8] text-center flex flex-col items-center justify-center space-y-4 rounded-xs shadow-xs"
                 role="alert"
               >
-                <CheckCircle2 size={44} className="text-[#555349]" />
-                <h4 className="text-2xl font-serif text-neutral-900">
+                <CheckCircle2 size={44} className="text-[#858E71]" />
+                <h4 className="text-2xl font-serif text-[#858E71]">
                   Mensaje recibido con éxito
                 </h4>
-                <p className="text-sm text-neutral-600 font-light max-w-md leading-relaxed">
+                <p className="text-sm text-[#555349] font-light max-w-md leading-relaxed">
                   Gracias por tu interés en NIDO. Nos pondremos en contacto contigo en las próximas horas.
                 </p>
                 <button
                   type="button"
                   onClick={() => setIsSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 bg-[#555349] text-white text-xs font-semibold uppercase tracking-wider hover:bg-neutral-900 transition-colors cursor-pointer"
+                  className="mt-4 px-6 py-2.5 bg-[#555349] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#858E71] transition-colors cursor-pointer"
                 >
                   Enviar otro mensaje
                 </button>
@@ -149,7 +149,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                 <div>
                   <label
                     htmlFor="fullName"
-                    className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-600 mb-2"
+                    className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#555349] mb-2"
                   >
                     NOMBRE COMPLETO
                   </label>
@@ -161,7 +161,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                     value={formData.fullName}
                     onChange={handleInputChange}
                     placeholder="Carlos Mendoza"
-                    className="w-full px-4 py-3.5 bg-white border border-[#d6cfc5] text-neutral-900 text-sm focus:outline-hidden focus:border-[#555349] focus:ring-1 focus:ring-[#555349] transition-all rounded-xs"
+                    className="w-full px-4 py-3.5 bg-white border border-[#ded5c8] text-neutral-900 text-sm focus:outline-hidden focus:border-[#858E71] focus:ring-1 focus:ring-[#858E71] transition-all rounded-xs"
                   />
                 </div>
 
@@ -169,7 +169,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-600 mb-2"
+                      className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#555349] mb-2"
                     >
                       CORREO ELECTRÓNICO
                     </label>
@@ -181,14 +181,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="nombre@ejemplo.com"
-                      className="w-full px-4 py-3.5 bg-white border border-[#d6cfc5] text-neutral-900 text-sm focus:outline-hidden focus:border-[#555349] focus:ring-1 focus:ring-[#555349] transition-all rounded-xs"
+                      className="w-full px-4 py-3.5 bg-white border border-[#ded5c8] text-neutral-900 text-sm focus:outline-hidden focus:border-[#858E71] focus:ring-1 focus:ring-[#858E71] transition-all rounded-xs"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-600 mb-2"
+                      className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#555349] mb-2"
                     >
                       TELÉFONO
                     </label>
@@ -200,7 +200,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+51 987 654 321"
-                      className="w-full px-4 py-3.5 bg-white border border-[#d6cfc5] text-neutral-900 text-sm focus:outline-hidden focus:border-[#555349] focus:ring-1 focus:ring-[#555349] transition-all rounded-xs"
+                      className="w-full px-4 py-3.5 bg-white border border-[#ded5c8] text-neutral-900 text-sm focus:outline-hidden focus:border-[#858E71] focus:ring-1 focus:ring-[#858E71] transition-all rounded-xs"
                     />
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                 <div>
                   <label
                     htmlFor="projectInterest"
-                    className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-600 mb-2"
+                    className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#555349] mb-2"
                   >
                     PROYECTO DE INTERÉS
                   </label>
@@ -218,11 +218,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                       name="projectInterest"
                       value={formData.projectInterest}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3.5 bg-white border border-[#d6cfc5] text-neutral-900 text-sm focus:outline-hidden focus:border-[#555349] focus:ring-1 focus:ring-[#555349] transition-all rounded-xs appearance-none cursor-pointer pr-10"
+                      className="w-full px-4 py-3.5 bg-white border border-[#ded5c8] text-neutral-900 text-sm focus:outline-hidden focus:border-[#858E71] focus:ring-1 focus:ring-[#858E71] transition-all rounded-xs appearance-none cursor-pointer pr-10"
                     >
                       <option value="BOSCO">BOSCO — Vivir frente al parque lo cambia todo</option>
-                      <option value="CASCANUECES">CASCANUECES — En Construcción</option>
-                      <option value="MORATTA">MORATTA — Concluido</option>
+                      <option value="MORATTA">MORATTA — En Construcción</option>
+                      <option value="CASCANUECES">CASCANUECES — En Acabados</option>
                       <option value="GENERAL">Información general / Próximos desarrollos</option>
                     </select>
                     <ChevronDown
@@ -235,7 +235,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-600 mb-2"
+                    className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#555349] mb-2"
                   >
                     MENSAJE (OPCIONAL)
                   </label>
@@ -246,14 +246,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Cuéntanos sobre tus preferencias de metraje, dormitorios o dudas..."
-                    className="w-full px-4 py-3 bg-white border border-[#d6cfc5] text-neutral-900 text-sm focus:outline-hidden focus:border-[#555349] focus:ring-1 focus:ring-[#555349] transition-all rounded-xs resize-none"
+                    className="w-full px-4 py-3 bg-white border border-[#ded5c8] text-neutral-900 text-sm focus:outline-hidden focus:border-[#858E71] focus:ring-1 focus:ring-[#858E71] transition-all rounded-xs resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full py-4 bg-[#555349] text-white text-xs font-semibold uppercase tracking-[0.18em] hover:bg-[#424039] hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs group"
+                  className="w-full py-4 bg-[#555349] text-white text-xs font-semibold uppercase tracking-[0.18em] hover:bg-[#858E71] hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs group"
                 >
                   <span>{isLoading ? 'ENVIANDO...' : 'ENVIAR MENSAJE'}</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1.5 transition-transform duration-300" />
@@ -264,9 +264,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
         </div>
 
         {/* Canales Directos y Visítanos (WhatsApp, Correo, Instagram, Oficina) */}
-        <div className="pt-12 border-t border-[#e7e1d7]">
+        <div className="pt-12 border-t border-[#ded5c8]">
           <ScrollText delay={50}>
-            <span className="text-[10px] uppercase tracking-[0.22em] text-[#73706B] font-semibold block mb-6">
+            <span className="text-[10px] uppercase tracking-[0.22em] text-[#858E71] font-semibold block mb-6">
               CANALES DE ATENCIÓN DIRECTA
             </span>
           </ScrollText>
@@ -278,19 +278,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                   href={channel.actionUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3.5 p-4 bg-white border border-[#e5dfd5] rounded-xs hover:border-[#555349] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer"
+                  className="flex items-center gap-3.5 p-4 bg-[#FAF7F2] border border-[#ded5c8] rounded-xs hover:border-[#858E71] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#faf8f5] flex items-center justify-center shrink-0 border border-[#e5dfd5] group-hover:bg-[#555349] group-hover:text-white transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-[#e3dbcd] flex items-center justify-center shrink-0 border border-[#ded5c8] group-hover:bg-[#858E71] group-hover:text-white transition-all duration-300">
                     {renderChannelIcon(channel.type)}
                   </div>
                   <div>
-                    <span className="block text-[10px] uppercase tracking-wider text-neutral-400 font-semibold group-hover:text-[#555349] transition-colors">
+                    <span className="block text-[10px] uppercase tracking-wider text-[#858E71] font-semibold group-hover:text-[#555349] transition-colors">
                       {channel.title}
                     </span>
                     <span className="text-xs sm:text-sm font-medium text-neutral-900 block">
                       {channel.value}
                     </span>
-                    <span className="text-[11px] text-neutral-500 font-light truncate block max-w-[160px]">
+                    <span className="text-[11px] text-[#555349] font-light truncate block max-w-[160px]">
                       {channel.subtext}
                     </span>
                   </div>
@@ -301,12 +301,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
             {/* Visítanos */}
             {data.visitInfo && (
               <ScrollBox delay={data.channels.length * 90}>
-                <div className="flex items-center gap-3.5 p-4 bg-white border border-[#e5dfd5] rounded-xs hover:border-[#555349] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                  <div className="w-10 h-10 rounded-full bg-[#faf8f5] flex items-center justify-center shrink-0 border border-[#e5dfd5] group-hover:bg-[#555349] group-hover:text-white transition-all duration-300">
+                <div className="flex items-center gap-3.5 p-4 bg-[#FAF7F2] border border-[#ded5c8] rounded-xs hover:border-[#858E71] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-full bg-[#e3dbcd] flex items-center justify-center shrink-0 border border-[#ded5c8] group-hover:bg-[#858E71] group-hover:text-white transition-all duration-300">
                     <MapPin size={18} className="text-neutral-800 group-hover:text-white transition-colors" />
                   </div>
                   <div className="flex-1">
-                    <span className="block text-[10px] uppercase tracking-wider text-neutral-400 font-semibold">
+                    <span className="block text-[10px] uppercase tracking-wider text-[#858E71] font-semibold">
                       {data.visitInfo.title}
                     </span>
                     <a

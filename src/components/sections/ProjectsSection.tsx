@@ -142,49 +142,49 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
   return (
     <section
       id="proyectos"
-      className="py-24 sm:py-32 bg-[#faf8f5] text-neutral-900 border-b border-[#e7e1d7]"
+      className="py-24 sm:py-32 bg-[#EEE6DB] text-neutral-900 border-b border-[#ded5c8]"
       aria-label="Proyectos inmobiliarios y portafolio de NIDO"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10">
         {/* Encabezado de Sección */}
         <ScrollReveal animation="fade-up">
-          <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#e7e1d7] text-xs uppercase tracking-widest text-neutral-400">
+          <div className="flex items-center justify-between pb-6 mb-12 border-b border-[#ded5c8] text-xs uppercase tracking-widest text-[#858E71]">
             <div className="flex items-center gap-3">
-              <span className="font-mono text-neutral-900 font-semibold">{data.sectionNumber || '02'}</span>
+              <span className="font-mono text-[#858E71] font-semibold">{data.sectionNumber || '02'}</span>
               <span>/</span>
               <span>{data.sectionTag || 'PROYECTOS'}</span>
             </div>
-            <span className="hidden sm:inline font-mono tracking-wider">DESARROLLOS SELECCIONADOS</span>
+            <span className="hidden sm:inline font-mono tracking-wider text-[#858E71]/80">DESARROLLOS SELECCIONADOS</span>
           </div>
         </ScrollReveal>
 
         {/* PROYECTO INSIGNIA: BOSCO */}
         <ScrollBox delay={80}>
-          <article className="bg-white rounded-xs border border-[#e5dfd5] shadow-xs overflow-hidden mb-24 sm:mb-32">
+          <article className="bg-[#FAF7F2] rounded-xs border border-[#ded5c8] shadow-xs overflow-hidden mb-24 sm:mb-32">
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
               {/* Información Editorial del Proyecto */}
-              <div className="lg:col-span-5 p-8 sm:p-12 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#e5dfd5]">
+              <div className="lg:col-span-5 p-8 sm:p-12 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#ded5c8]">
                 <div>
                   <ScrollText delay={120}>
-                    <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#73706B] font-semibold block mb-3">
+                    <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#858E71] font-semibold block mb-3">
                       {mainProject.badge || 'NUESTRO PRIMER PROYECTO'}
                     </span>
                   </ScrollText>
 
                   <ScrollText delay={200}>
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-neutral-900 tracking-tight leading-none mb-3">
+                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#858E71] tracking-tight leading-none mb-3">
                       {mainProject.name}
                     </h2>
                   </ScrollText>
 
                   <ScrollText delay={280}>
-                    <p className="text-lg sm:text-xl font-serif italic text-neutral-600 mb-6 font-light">
+                    <p className="text-lg sm:text-xl font-serif text-[#858E71]/85 mb-6 font-normal">
                       {mainProject.tagline || 'Vivir frente al parque lo cambia todo.'}
                     </p>
                   </ScrollText>
 
                   <ScrollText delay={360}>
-                    <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-light mb-8">
+                    <p className="text-sm sm:text-base text-[#555349] leading-relaxed font-light mb-8">
                       {mainProject.description}
                     </p>
                   </ScrollText>
@@ -195,7 +195,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                   <div className="pt-4">
                     <a
                       href={mainProject.ctaLink || '#contacto'}
-                      className="inline-flex items-center justify-center gap-2.5 px-7 py-4 bg-[#555349] text-white text-xs font-semibold uppercase tracking-[0.18em] hover:bg-neutral-900 hover:shadow-md transition-all group cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2.5 px-7 py-4 bg-[#555349] text-white text-xs font-semibold uppercase tracking-[0.18em] hover:bg-[#858E71] hover:shadow-md transition-all group cursor-pointer"
                     >
                       <span>{mainProject.ctaText || 'CONOCE BOSCO'}</span>
                       <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform duration-300" />
@@ -236,20 +236,20 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
         </ScrollBox>
 
         {/* TRAYECTORIA PREVIA (MORATTA & CASCANUECES) */}
-        <div className="pt-12 sm:pt-16 border-t border-[#e7e1d7]">
+        <div className="pt-12 sm:pt-16 border-t border-[#ded5c8]">
           <header className="max-w-3xl mb-12">
             <ScrollText delay={50}>
-              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#73706B] font-semibold block mb-3">
+              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#858E71] font-semibold block mb-3">
                 {trajectoryBadge || 'TRAYECTORIA'}
               </span>
             </ScrollText>
             <ScrollText delay={150}>
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 tracking-tight leading-tight mb-4">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#858E71] tracking-tight leading-tight mb-4">
                 {trajectoryTitle || 'La experiencia también se construye.'}
               </h3>
             </ScrollText>
             <ScrollText delay={250}>
-              <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-light">
+              <p className="text-sm sm:text-base text-[#555349] leading-relaxed font-light">
                 {trajectoryDescription}
               </p>
             </ScrollText>
@@ -257,15 +257,15 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
 
           {/* Dos Columnas de Proyectos Previos perfectamente alineadas y simétricas */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-            {/* PROYECTO PREVIO 1: MORATTA (EN ACABADOS) */}
+            {/* PROYECTO PREVIO 1: MORATTA (EN CONSTRUCCIÓN) */}
             {morattaProject && (
               <ScrollBox delay={120} className="h-full">
-                <article className="group bg-white p-6 sm:p-7 rounded-xs border border-[#e5dfd5] hover:border-[#555349] transition-all hover:shadow-sm h-full flex flex-col justify-between">
+                <article className="group bg-[#FAF7F2] p-6 sm:p-7 rounded-xs border border-[#ded5c8] hover:border-[#858E71] transition-all hover:shadow-sm h-full flex flex-col justify-between">
                   <div>
                     <figure
                       onClick={() => openGallery('MORATTA', morattaProject.gallery || [{ label: 'Fachada', src: morattaImage }])}
                       style={{ aspectRatio: '16/10' }}
-                      className="m-0 overflow-hidden rounded-xs bg-[#ede8e0] aspect-[16/10] w-full mb-4 shadow-xs border border-[#e5dfd5] relative cursor-pointer group/fig shrink-0"
+                      className="m-0 overflow-hidden rounded-xs bg-[#e3dbcd] aspect-[16/10] w-full mb-4 shadow-xs border border-[#ded5c8] relative cursor-pointer group/fig shrink-0"
                       title="Clic para ver galería completa"
                     >
                       <img
@@ -274,8 +274,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                         loading="lazy"
                         className="w-full h-full object-cover group-hover/fig:scale-104 transition-all duration-700 ease-out"
                       />
-                      <div className="absolute top-3 right-3 px-2.5 py-1 bg-black/80 backdrop-blur-xs text-white text-[9px] uppercase tracking-widest font-semibold shadow-xs">
-                        {morattaProject.statusTag || 'EN ACABADOS'}
+                      {/* Badge dinámico: En Construcción = Arcilla #9b5238 */}
+                      <div className="absolute top-3 right-3 px-2.5 py-1 bg-[#9b5238] text-white text-[9px] uppercase tracking-widest font-semibold shadow-xs">
+                        {morattaProject.statusTag || 'EN CONSTRUCCIÓN'}
                       </div>
                     </figure>
 
@@ -288,16 +289,16 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                   <div className="flex-1 flex flex-col justify-between pt-2">
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <div>
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#73706B] font-semibold block mb-1">
-                          {morattaProject.category} · {morattaProject.statusTag || 'EN ACABADOS'}
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#858E71] font-semibold block mb-1">
+                          {morattaProject.category} · {morattaProject.statusTag || 'EN CONSTRUCCIÓN'}
                         </span>
-                        <h4 className="text-2xl font-serif text-neutral-900 tracking-tight group-hover:text-[#9b5238] transition-colors">
+                        <h4 className="text-2xl font-serif text-[#858E71] tracking-tight group-hover:text-[#9b5238] transition-colors">
                           {morattaProject.name}
                         </h4>
                       </div>
                       <div
                         onClick={() => openGallery('MORATTA', morattaProject.gallery || [{ label: 'Fachada', src: morattaImage }])}
-                        className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-700 group-hover:bg-[#555349] group-hover:text-white group-hover:border-[#555349] transition-colors shrink-0 cursor-pointer"
+                        className="w-9 h-9 rounded-full border border-[#ded5c8] flex items-center justify-center text-[#555349] group-hover:bg-[#858E71] group-hover:text-white group-hover:border-[#858E71] transition-colors shrink-0 cursor-pointer"
                         title="Ver galería"
                       >
                         <ArrowUpRight size={16} />
@@ -305,7 +306,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                     </div>
 
                     {morattaProject.description && (
-                      <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed min-h-[44px] flex items-start">
+                      <p className="text-xs sm:text-sm text-[#555349] font-light leading-relaxed min-h-[44px] flex items-start">
                         {morattaProject.description}
                       </p>
                     )}
@@ -314,15 +315,15 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
               </ScrollBox>
             )}
 
-            {/* PROYECTO PREVIO 2: CASCANUECES (EN CONSTRUCCIÓN) */}
+            {/* PROYECTO PREVIO 2: CASCANUECES (EN ACABADOS) */}
             {cascanuecesProject && (
               <ScrollBox delay={250} className="h-full">
-                <article className="group bg-white p-6 sm:p-7 rounded-xs border border-[#e5dfd5] hover:border-[#555349] transition-all hover:shadow-sm h-full flex flex-col justify-between">
+                <article className="group bg-[#FAF7F2] p-6 sm:p-7 rounded-xs border border-[#ded5c8] hover:border-[#858E71] transition-all hover:shadow-sm h-full flex flex-col justify-between">
                   <div>
                     <figure
                       onClick={() => openGallery('CASCANUECES', cascanuecesProject.gallery || [{ label: 'Fachada', src: cascanuecesImage }])}
                       style={{ aspectRatio: '16/10' }}
-                      className="m-0 overflow-hidden rounded-xs bg-[#ede8e0] aspect-[16/10] w-full mb-4 shadow-xs border border-[#e5dfd5] relative cursor-pointer group/fig shrink-0"
+                      className="m-0 overflow-hidden rounded-xs bg-[#e3dbcd] aspect-[16/10] w-full mb-4 shadow-xs border border-[#ded5c8] relative cursor-pointer group/fig shrink-0"
                       title="Clic para ver galería completa"
                     >
                       <img
@@ -331,8 +332,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                         loading="lazy"
                         className="w-full h-full object-cover group-hover/fig:scale-104 transition-all duration-700 ease-out"
                       />
-                      <div className="absolute top-3 right-3 px-2.5 py-1 bg-[#9b5238] text-white text-[9px] uppercase tracking-widest font-semibold shadow-xs">
-                        {cascanuecesProject.statusTag || 'EN CONSTRUCCIÓN'}
+                      {/* Badge dinámico: En Acabados = Piedra Oscura #2a2925 */}
+                      <div className="absolute top-3 right-3 px-2.5 py-1 bg-[#2a2925] text-white text-[9px] uppercase tracking-widest font-semibold shadow-xs">
+                        {cascanuecesProject.statusTag || 'EN ACABADOS'}
                       </div>
                     </figure>
 
@@ -345,16 +347,16 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                   <div className="flex-1 flex flex-col justify-between pt-2">
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <div>
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#73706B] font-semibold block mb-1">
-                          {cascanuecesProject.category} · {cascanuecesProject.statusTag || 'EN CONSTRUCCIÓN'}
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#858E71] font-semibold block mb-1">
+                          {cascanuecesProject.category} · {cascanuecesProject.statusTag || 'EN ACABADOS'}
                         </span>
-                        <h4 className="text-2xl font-serif text-neutral-900 tracking-tight group-hover:text-[#9b5238] transition-colors">
+                        <h4 className="text-2xl font-serif text-[#858E71] tracking-tight group-hover:text-[#9b5238] transition-colors">
                           {cascanuecesProject.name}
                         </h4>
                       </div>
                       <div
                         onClick={() => openGallery('CASCANUECES', cascanuecesProject.gallery || [{ label: 'Fachada', src: cascanuecesImage }])}
-                        className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-700 group-hover:bg-[#555349] group-hover:text-white group-hover:border-[#555349] transition-colors shrink-0 cursor-pointer"
+                        className="w-9 h-9 rounded-full border border-[#ded5c8] flex items-center justify-center text-[#555349] group-hover:bg-[#858E71] group-hover:text-white group-hover:border-[#858E71] transition-colors shrink-0 cursor-pointer"
                         title="Ver galería"
                       >
                         <ArrowUpRight size={16} />
@@ -362,7 +364,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                     </div>
 
                     {cascanuecesProject.description && (
-                      <p className="text-xs sm:text-sm text-neutral-600 font-light leading-relaxed min-h-[44px] flex items-start">
+                      <p className="text-xs sm:text-sm text-[#555349] font-light leading-relaxed min-h-[44px] flex items-start">
                         {cascanuecesProject.description}
                       </p>
                     )}

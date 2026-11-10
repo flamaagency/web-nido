@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
             />
           </a>
 
-          {/* Lema Oficial Fiel al PDF */}
-          <p className="font-serif italic text-base sm:text-xl text-[#a2a397] text-center md:text-right font-light tracking-wide">
+          {/* Lema Oficial Fiel al PDF sin cursiva */}
+          <p className="font-serif not-italic text-base sm:text-xl text-[#a2a397] text-center md:text-right font-normal tracking-wide">
             "Construimos lugares donde quieras quedarte."
           </p>
         </div>

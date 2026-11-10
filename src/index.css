@@ -11,6 +11,7 @@
   --font-jetbrains: "JetBrains Mono", monospace;
 
   /* Paleta Oficial NIDO. (PDF Identidad) */
+  --color-verde-nido: #858E71;
   --color-limo: #a2a397;
   --color-piedra: #555349;
   --color-piedra-dark: #2a2925;
@@ -18,11 +19,11 @@
   --color-arcilla-hover: #803f29;
   --color-arena: #dbb294;
   --color-arena-soft: #f6eee6;
-  --color-tierra-canvas: #faf8f5;
+  --color-tierra-canvas: #EEE6DB;
   --color-tierra-warm: #f3eee7;
 
   /* Aliases contextuales */
-  --color-bone-canvas: #F8F7F4;
+  --color-bone-canvas: #EEE6DB;
   --color-charcoal-ink: #555349;
   --color-travertine-subtle: #f1ece4;
   --color-hairline-stone: #a2a397;
@@ -30,7 +31,7 @@
   --color-slate-caption: #73706B;
   --color-pure-black: #2a2925;
   
-  --color-surface: #faf8f5;
+  --color-surface: #EEE6DB;
   --color-surface-container-lowest: #ffffff;
   --color-surface-container-low: #f5f2ec;
   --color-surface-container: #ede8df;
@@ -173,8 +174,8 @@
 
   body {
     font-family: var(--font-montserrat);
-    background-color: #faf9f6;
-    color: #1a1c1a;
+    background-color: #EEE6DB;
+    color: #2a2925;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -182,16 +183,21 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Excluir el Hub de Flama de la regla de Baskerville para headings */
-  body:not(:has(.font-flama)) h1,
+  /* Headings con tipografía Libre Baskerville y tono verde institucional #858E71 */
+  body:not(:has(.font-flama)) h1:not(#inicio h1),
   body:not(:has(.font-flama)) h2,
   body:not(:has(.font-flama)) h3,
   body:not(:has(.font-flama)) h4,
-  h1:not(.font-flama-heading),
+  h1:not(.font-flama-heading):not(#inicio h1),
   h2:not(.font-flama-heading),
   h3:not(.font-flama-heading),
   h4:not(.font-flama-heading),
-  .font-serif {
+  .font-serif:not(#inicio .font-serif) {
+    font-family: var(--font-baskerville);
+    color: #858E71;
+  }
+
+  #inicio .font-serif {
     font-family: var(--font-baskerville);
   }
 }

@@ -10,7 +10,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ data }) => {
   return (
     <section
       id="nosotros"
-      className="py-24 sm:py-32 bg-[#faf8f5] text-neutral-900 border-b border-[#e7e1d7]"
+      className="py-24 sm:py-32 bg-[#EEE6DB] text-neutral-900 border-b border-[#ded5c8]"
       aria-label="Nosotros y filosofía de NIDO"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 space-y-24 sm:space-y-32">
@@ -21,7 +21,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ data }) => {
             <div
               key={idx}
               className={`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center ${
-                idx !== data.blocks.length - 1 ? 'pb-24 sm:pb-32 border-b border-[#e7e1d7]' : ''
+                idx !== data.blocks.length - 1 ? 'pb-24 sm:pb-32 border-b border-[#ded5c8]' : ''
               }`}
             >
               {/* Texto (Lado izquierdo o derecho según layout de la imagen de referencia) */}
@@ -31,19 +31,19 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ data }) => {
                 }`}
               >
                 <ScrollText delay={50}>
-                  <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#73706B] font-semibold block mb-4">
+                  <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#858E71] font-semibold block mb-4">
                     {block.tag}
                   </span>
                 </ScrollText>
 
                 <ScrollText delay={150}>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-neutral-900 leading-[1.2] tracking-tight mb-5">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#858E71] leading-[1.2] tracking-tight mb-5">
                     {block.heading}
                   </h2>
                 </ScrollText>
 
                 <ScrollText delay={250}>
-                  <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-light max-w-xl">
+                  <p className="text-sm sm:text-base text-[#555349] leading-relaxed font-light max-w-xl">
                     {block.text}
                   </p>
                 </ScrollText>
@@ -63,7 +63,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ data }) => {
                 }`}
               >
                 <ScrollBox delay={200}>
-                  <figure className="m-0 overflow-hidden rounded-xs bg-[#f0eae1] aspect-[16/10] shadow-sm border border-[#e5dfd5] group cursor-pointer">
+                  <figure className="m-0 overflow-hidden rounded-xs bg-[#e3dbcd] aspect-[16/10] shadow-sm border border-[#d6cebf] group cursor-pointer">
                     <img
                       src={block.imageSrc}
                       alt={block.imageAlt}

@@ -40,7 +40,9 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
           <img
             src={isScrolled ? assetUrl('img/nido-logotipo-oficial.png') : assetUrl('img/nido-logotipo-oficial-blanco.png')}
             alt="NIDO Desarrollos Inmobiliarios"
-            className="h-6 sm:h-7.5 w-auto object-contain transition-all duration-300"
+            className={`h-6 sm:h-7.5 w-auto object-contain transition-all duration-300 ${
+              !isScrolled ? 'drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)]' : ''
+            }`}
           />
         </a>
 
@@ -54,7 +56,9 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
               key={link.id}
               href={link.href}
               className={`text-xs uppercase tracking-[0.16em] font-medium transition-all duration-200 relative group py-1 ${
-                isScrolled ? 'text-neutral-700 hover:text-[#9b5238]' : 'text-white/90 hover:text-[#a2a397]'
+                isScrolled
+                  ? 'text-neutral-700 hover:text-[#9b5238]'
+                  : 'text-white/95 hover:text-[#a2a397] [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]'
               }`}
             >
               <span>{link.label}</span>
@@ -72,7 +76,9 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
           type="button"
           onClick={toggleMenu}
           className={`md:hidden p-2 rounded-md transition-colors cursor-pointer ${
-            isScrolled ? 'text-neutral-900 hover:bg-neutral-200/50' : 'text-white hover:bg-white/10'
+            isScrolled
+              ? 'text-neutral-900 hover:bg-neutral-200/50'
+              : 'text-white hover:bg-white/10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
           }`}
           aria-expanded={isOpen}
           aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}

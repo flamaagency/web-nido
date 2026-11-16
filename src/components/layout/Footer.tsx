@@ -18,9 +18,9 @@ export const Footer: React.FC = () => {
             />
           </a>
 
-          {/* Lema Oficial Fiel al PDF con tipografía cursiva refinada */}
-          <p className="font-cursive-tagline text-lg sm:text-2xl text-[#a2a397] text-center md:text-right font-normal tracking-wide">
-            "Construimos lugares donde quieras quedarte."
+          {/* Lema Oficial en Montserrat con "lugares" destacado */}
+          <p className="font-sans not-italic text-base sm:text-xl text-[#e5ddd0] text-center md:text-right font-light tracking-[0.04em]">
+            construimos <span className="text-[#d98a6c] font-normal">lugares</span> donde quieras quedarte.
           </p>
         </div>
 

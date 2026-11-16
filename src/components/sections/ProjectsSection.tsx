@@ -88,7 +88,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
 
     return (
       <div
-        className={`flex items-center gap-1.5 overflow-x-auto ${
+        className={`flex items-center flex-wrap gap-1.5 ${
           theme === 'dark'
             ? 'p-3 sm:p-3.5 bg-neutral-950 border-t border-neutral-850'
             : 'pb-3 mb-3 font-mono text-[10px] uppercase tracking-wider'
@@ -103,7 +103,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
               onClick={() => onSelectImage(item.src)}
               className={
                 theme === 'dark'
-                  ? `flex items-center gap-1.5 px-3 py-1.5 rounded-xs text-[11px] font-sans tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+                  ? `flex items-center gap-1.5 px-2.5 py-1.5 rounded-xs text-[11px] font-sans tracking-wide transition-all cursor-pointer whitespace-nowrap ${
                       isActive
                         ? 'bg-[#9b5238] text-white font-medium shadow-xs'
                         : 'bg-neutral-900/90 text-neutral-300 hover:bg-neutral-800 hover:text-white border border-neutral-800'
@@ -163,7 +163,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
           <article className="bg-[#FAF7F2] rounded-xs border border-[#ded5c8] shadow-xs overflow-hidden mb-24 sm:mb-32">
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
               {/* Información Editorial del Proyecto */}
-              <div className="lg:col-span-5 p-8 sm:p-12 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#ded5c8]">
+              <div className="lg:col-span-7 p-8 sm:p-12 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#ded5c8]">
                 <div>
                   <ScrollText delay={120}>
                     <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#858E71] font-semibold block mb-3">
@@ -184,7 +184,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                   </ScrollText>
 
                   <ScrollText delay={360}>
-                    <p className="text-sm sm:text-base text-[#555349] leading-relaxed font-light mb-8">
+                    <p className="text-sm sm:text-base text-[#555349] leading-relaxed font-light mb-8 max-w-xl">
                       {mainProject.description}
                     </p>
                   </ScrollText>
@@ -204,26 +204,26 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ data }) => {
                 </ScrollText>
               </div>
 
-              {/* Render Principal de BOSCO con tag de estado y tira de 4 tags + número */}
-              <div className="lg:col-span-7 flex flex-col justify-between bg-neutral-900 overflow-hidden">
+              {/* Render Principal de BOSCO con altura fija equivalente al Lobby y zoom detalle en pisos */}
+              <div className="lg:col-span-5 flex flex-col justify-between bg-neutral-900 overflow-hidden">
                 <div
                   onClick={() => openGallery('BOSCO', mainProject.gallery || [{ label: 'Fachada', src: boscoImage }])}
-                  className="relative min-h-[380px] sm:min-h-[460px] flex-1 bg-neutral-950 group overflow-hidden cursor-pointer"
+                  className="relative h-[300px] sm:h-[340px] lg:h-auto lg:min-h-[340px] lg:flex-1 w-full bg-neutral-950 group overflow-hidden cursor-pointer"
                   title="Clic para ver galería a pantalla completa"
                 >
                   <img
                     src={boscoImage}
-                    alt={`Render de ${mainProject.name}`}
+                    alt={`Plano detalle de ${mainProject.name}`}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-104 transition-all duration-700 ease-out"
+                    className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-104 transition-all duration-700 ease-out"
                   />
                   {/* Badge flotante de estado en el render */}
-                  <div className="absolute top-6 right-6 px-3.5 py-1.5 bg-neutral-900/85 text-white text-[10px] uppercase tracking-widest font-semibold backdrop-blur-xs shadow-xs pointer-events-none">
+                  <div className="absolute z-20 top-6 right-6 px-3.5 py-1.5 bg-neutral-900/85 text-white text-[10px] uppercase tracking-widest font-semibold backdrop-blur-xs shadow-xs pointer-events-none">
                     {mainProject.statusTag || 'PRIMER PROYECTO NIDO.'}
                   </div>
 
                   {/* Icono discreto de expandir */}
-                  <div className="absolute bottom-4 right-4 p-2 bg-black/60 hover:bg-black/90 text-white rounded-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute z-20 bottom-4 right-4 p-2 bg-black/60 hover:bg-black/90 text-white rounded-xs opacity-0 group-hover:opacity-100 transition-opacity">
                     <Maximize2 size={16} />
                   </div>
                 </div>

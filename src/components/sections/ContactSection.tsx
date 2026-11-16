@@ -106,7 +106,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
           <ScrollBox delay={100} className="lg:col-span-5 h-full min-h-[420px] lg:min-h-[580px]">
             <figure className="m-0 h-full w-full overflow-hidden rounded-xs bg-[#e3dbcd] shadow-sm border border-[#ded5c8] relative group">
               <img
-                src={data.imageSrc || assetUrl('img/content/nido-contacto-arquitectura-real.webp')}
+                src={data.imageSrc || assetUrl('img/content/nido-contacto-arquitectura-hogar.webp')}
                 alt="Ambiente y arquitectura NIDO"
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-103 group-hover:brightness-105 transition-all duration-700 ease-out"
@@ -298,31 +298,34 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
               </ScrollBox>
             ))}
 
-            {/* Visítanos */}
+            {/* Visítanos / Ubicación */}
             {data.visitInfo && (
               <ScrollBox delay={data.channels.length * 90}>
-                <div className="flex items-center gap-3.5 p-4 bg-[#FAF7F2] border border-[#ded5c8] rounded-xs hover:border-[#858E71] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <a
+                  href={data.visitInfo.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3.5 p-4 bg-[#FAF7F2] border border-[#ded5c8] rounded-xs hover:border-[#858E71] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer"
+                >
                   <div className="w-10 h-10 rounded-full bg-[#e3dbcd] flex items-center justify-center shrink-0 border border-[#ded5c8] group-hover:bg-[#858E71] group-hover:text-white transition-all duration-300">
                     <MapPin size={18} className="text-neutral-800 group-hover:text-white transition-colors" />
                   </div>
-                  <div className="flex-1">
-                    <span className="block text-[10px] uppercase tracking-wider text-[#858E71] font-semibold">
+                  <div className="flex-1 min-w-0">
+                    <span className="block text-[10px] uppercase tracking-wider text-[#858E71] font-semibold group-hover:text-[#555349] transition-colors">
                       {data.visitInfo.title}
                     </span>
-                    <a
-                      href={data.visitInfo.mapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-neutral-900 hover:text-[#9b5238] transition-colors group/visita mt-0.5"
+                    <span
+                      className="text-xs sm:text-sm font-medium text-neutral-900 block truncate"
+                      title={data.visitInfo.address || data.visitInfo.description}
                     >
-                      <span>{data.visitInfo.actionLabel || 'VER UBICACIÓN'}</span>
-                      <ArrowRight size={12} className="group-hover/visita:translate-x-1 transition-transform" />
-                    </a>
-                    <span className="text-[11px] text-neutral-500 font-light block">
-                      Oficina comercial
+                      {data.visitInfo.address || data.visitInfo.description}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-[11px] text-[#858E71] group-hover:text-[#9b5238] font-medium transition-colors">
+                      <span>{data.visitInfo.actionLabel || 'VER EN MAPA'}</span>
+                      <ArrowRight size={11} className="group-hover:translate-x-1 transition-transform" />
                     </span>
                   </div>
-                </div>
+                </a>
               </ScrollBox>
             )}
           </div>

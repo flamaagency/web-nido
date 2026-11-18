@@ -32,7 +32,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
     fullName: '',
     email: '',
     phone: '',
-    projectInterest: 'BOSCO',
+    projectInterest: 'MORATTA',
     message: '',
   });
 
@@ -220,10 +220,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3.5 bg-white border border-[#ded5c8] text-neutral-900 text-sm focus:outline-hidden focus:border-[#858E71] focus:ring-1 focus:ring-[#858E71] transition-all rounded-xs appearance-none cursor-pointer pr-10"
                     >
-                      <option value="BOSCO">BOSCO — Vivir frente al parque lo cambia todo</option>
                       <option value="MORATTA">MORATTA — En Construcción</option>
-                      <option value="CASCANUECES">CASCANUECES — En Acabados</option>
-                      <option value="GENERAL">Información general / Próximos desarrollos</option>
                     </select>
                     <ChevronDown
                       size={18}
@@ -278,19 +275,22 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                   href={channel.actionUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3.5 p-4 bg-[#FAF7F2] border border-[#ded5c8] rounded-xs hover:border-[#858E71] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer"
+                  className="flex items-center gap-3.5 p-4 bg-[#FAF7F2] border border-[#ded5c8] rounded-xs hover:border-[#858E71] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer overflow-hidden min-w-0"
                 >
                   <div className="w-10 h-10 rounded-full bg-[#e3dbcd] flex items-center justify-center shrink-0 border border-[#ded5c8] group-hover:bg-[#858E71] group-hover:text-white transition-all duration-300">
                     {renderChannelIcon(channel.type)}
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <span className="block text-[10px] uppercase tracking-wider text-[#858E71] font-semibold group-hover:text-[#555349] transition-colors">
                       {channel.title}
                     </span>
-                    <span className="text-xs sm:text-sm font-medium text-neutral-900 block">
+                    <span
+                      className="text-[11px] xs:text-xs sm:text-[13px] lg:text-sm font-medium text-neutral-900 block truncate"
+                      title={channel.value}
+                    >
                       {channel.value}
                     </span>
-                    <span className="text-[11px] text-[#555349] font-light truncate block max-w-[160px]">
+                    <span className="text-[11px] text-[#555349] font-light truncate block w-full">
                       {channel.subtext}
                     </span>
                   </div>
@@ -305,7 +305,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data }) => {
                   href={data.visitInfo.mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3.5 p-4 bg-[#FAF7F2] border border-[#ded5c8] rounded-xs hover:border-[#858E71] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer"
+                  className="flex items-center gap-3.5 p-4 bg-[#FAF7F2] border border-[#ded5c8] rounded-xs hover:border-[#858E71] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer overflow-hidden min-w-0"
                 >
                   <div className="w-10 h-10 rounded-full bg-[#e3dbcd] flex items-center justify-center shrink-0 border border-[#ded5c8] group-hover:bg-[#858E71] group-hover:text-white transition-all duration-300">
                     <MapPin size={18} className="text-neutral-800 group-hover:text-white transition-colors" />

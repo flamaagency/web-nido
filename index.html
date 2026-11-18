@@ -15,6 +15,16 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://nidodesarrolladora.pe/" />
 
+    <meta name="theme-color" content="#EEE6DB" />
+    <meta name="geo.region" content="PE-LAL" />
+    <meta name="geo.placename" content="Trujillo" />
+    <meta name="geo.position" content="-8.1362;-79.0345" />
+    <meta name="ICBM" content="-8.1362, -79.0345" />
+
+    <link rel="alternate" hreflang="es-PE" href="https://nidodesarrolladora.pe/" />
+    <link rel="alternate" hreflang="es" href="https://nidodesarrolladora.pe/" />
+    <link rel="alternate" hreflang="x-default" href="https://nidodesarrolladora.pe/" />
+
     <!-- Open Graph / Redes Sociales (WhatsApp, Facebook, LinkedIn) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nidodesarrolladora.pe/" />
@@ -22,45 +32,65 @@
     <meta property="og:locale" content="es_PE" />
     <meta property="og:title" content="NIDO. | Construimos lugares donde quieras quedarte" />
     <meta property="og:description" content="Desarrollamos proyectos inmobiliarios exclusivos en Trujillo. Arquitectura de autor y residencias concebidas para permanecer." />
-    <meta property="og:image" content="https://nidodesarrolladora.pe/img/bosco/nido-bosco-01-fachada.webp" />
-    <meta property="og:image:width" content="1600" />
-    <meta property="og:image:height" content="1175" />
-    <meta property="og:image:alt" content="Proyecto BOSCO - NIDO Desarrolladora" />
+    <meta property="og:image" content="https://nidodesarrolladora.pe/img/nido-og-share.jpg" />
+    <meta property="og:image:secure_url" content="https://nidodesarrolladora.pe/img/nido-og-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="NIDO Desarrollos Inmobiliarios Trujillo" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://nidodesarrolladora.pe/" />
     <meta name="twitter:title" content="NIDO. | Construimos lugares donde quieras quedarte" />
     <meta name="twitter:description" content="Desarrollamos proyectos inmobiliarios exclusivos en Trujillo. Arquitectura de autor y residencias concebidas para permanecer." />
-    <meta name="twitter:image" content="https://nidodesarrolladora.pe/img/bosco/nido-bosco-01-fachada.webp" />
+    <meta name="twitter:image" content="https://nidodesarrolladora.pe/img/nido-og-share.jpg" />
 
     <!-- Schema.org JSON-LD para Google Search y Negocios Locales -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "name": "NIDO Desarrollos Inmobiliarios",
-        "image": "https://nidodesarrolladora.pe/img/nido-logotipo-oficial.png",
-        "url": "https://nidodesarrolladora.pe/",
-        "telephone": "+51987654321",
-        "email": "contacto@nidodesarrolladora.pe",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Av. Prolongación César Vallejo",
-          "addressLocality": "El Golf, Trujillo",
-          "addressRegion": "La Libertad",
-          "addressCountry": "PE"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -8.1362,
-          "longitude": -79.0345
-        },
-        "description": "Desarrolladora inmobiliaria boutique en Trujillo, Perú. Proyectos residenciales de diseño y arquitectura pensados para permanecer.",
-        "areaServed": {
-          "@type": "City",
-          "name": "Trujillo"
-        }
+        "@graph": [
+          {
+            "@type": "RealEstateAgent",
+            "@id": "https://nidodesarrolladora.pe/#organization",
+            "name": "NIDO Desarrollos Inmobiliarios",
+            "image": "https://nidodesarrolladora.pe/img/nido-logotipo-oficial.png",
+            "logo": "https://nidodesarrolladora.pe/img/nido-logotipo-oficial.png",
+            "url": "https://nidodesarrolladora.pe/",
+            "telephone": "+51987654321",
+            "email": "contacto@nidodesarrolladora.pe",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Av. Prolongación César Vallejo",
+              "addressLocality": "El Golf, Trujillo",
+              "addressRegion": "La Libertad",
+              "addressCountry": "PE"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -8.1362,
+              "longitude": -79.0345
+            },
+            "description": "Desarrolladora inmobiliaria boutique en Trujillo, Perú. Proyectos residenciales de diseño y arquitectura pensados para permanecer.",
+            "priceRange": "$$$$",
+            "areaServed": {
+              "@type": "City",
+              "name": "Trujillo"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://nidodesarrolladora.pe/#website",
+            "url": "https://nidodesarrolladora.pe/",
+            "name": "NIDO Desarrollos Inmobiliarios",
+            "description": "Construimos lugares donde quieras quedarte. Proyectos inmobiliarios en Trujillo, Perú.",
+            "publisher": {
+              "@id": "https://nidodesarrolladora.pe/#organization"
+            },
+            "inLanguage": "es-PE"
+          }
+        ]
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

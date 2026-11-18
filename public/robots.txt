@@ -1,0 +1,6 @@
+# robots.txt para NIDO Desarrollos Inmobiliarios
+User-agent: *
+Allow: /
+
+# Sitemap oficial
+Sitemap: https://nidodesarrolladora.pe/sitemap.xml

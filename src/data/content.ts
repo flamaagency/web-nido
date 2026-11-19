@@ -171,9 +171,9 @@ export const contactContent: ContactData = {
       id: 'mail',
       type: 'email',
       title: 'Correo',
-      value: 'contacto@nidodesarrolladora.pe',
+      value: 'hola@nidodesarrolladora.pe',
       subtext: 'Escríbenos directamente para cotizaciones',
-      actionUrl: 'mailto:contacto@nidodesarrolladora.pe',
+      actionUrl: 'mailto:hola@nidodesarrolladora.pe',
     },
     {
       id: 'ig',
